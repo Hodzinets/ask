@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:13.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ask_db
+      POSTGRES_USER: ask_db_user
+      POSTGRES_PASSWORD: ask_db_password
+    ports:
+      - 5433:5432
+
+  keycloak:
+    depends_on:
+      - postgres
+    container_name: local_keycloak
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: postgres
+      DB_DATABASE: ask_db
+      DB_USER: ask_db_user
+      DB_PASSWORD: ask_db_password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    image: jboss/keycloak:13.0.0
+    ports:
+      - 9990:9990
+      - 8443:8443
+      - 28080:8080
+    restart: unless-stopped
