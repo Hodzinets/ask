@@ -1,15 +1,46 @@
 body {
-  padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: black;
+
+    color: white;
+    font-family: 'Courier New';
 }
+
+button {
+    background: white;
+    border: 2px solid black;
+    padding: 16px;
+    font-size: 26px;
+}
+
+a {
+    color: white;
+}
+
+button > a {
+    text-decoration: none;
+    color: black;
+}
+
 .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
 }
 
-h1{
-	color:#0000FF;
+.temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h2{
-	color:#FF0000;
-}
+/*h1{*/
+/*	color:#0000FF;*/
+/*}*/
+
+/*h2{*/
+/*	color:#FF0000;*/
+/*}*/

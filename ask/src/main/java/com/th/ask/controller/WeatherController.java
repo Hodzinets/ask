@@ -29,6 +29,9 @@ public class WeatherController {
         model.addAttribute("username", getUsernameFromRequest(request));
         model.addAttribute("city", city);
         model.addAttribute("temperature", weather.current.temp_c);
+        model.addAttribute("humidity", weather.current.humidity);
+        model.addAttribute("pressure", weather.current.pressure_mb);
+        model.addAttribute("img", weather.current.condition.icon);
 
         return "weather";
     }

@@ -15,14 +15,27 @@
 
 <main role="main" class="container">
 
+
     <div class="starter-template">
-        <h1><span th:text="'Hello ' + ${username}"></span></h1>
-        <h2>
-            <span th:text="'The temperature in, ' + ${city} + ' is:'"></span>
-        </h2>
-        <h3>
+        <img th:src="${img}"/>
+
+        <h1 th:text="'Hello ' + ${username} + ', '"></h1>
+        <h2 th:text="'Selected city: ' + ${city}" style="margin-bottom: 48px"></h2>
+
+        <div class="parameter">
+            <h2 th:text="'The temperature is:'"></h2>
             <span th:text="${temperature} + ' °C'"></span>
-        </h3>
+        </div>
+
+        <div class="parameter">
+            <h2 th:text="'The humidity is:'"></h2>
+            <span th:text="${humidity} + '%'"></span>
+        </div>
+
+        <div class="parameter">
+            <h2 th:text="'The pressue is:'"></h2>
+            <span th:text="${pressure}"></span>
+        </div>
 
         </br>
         </br>
@@ -41,7 +54,10 @@
 
         </br>
         </br>
-        <a href="/logout">Logout</a>
+
+        <button>
+            <a href="/logout">Logout</a>
+        </button>
     </div>
 
 </main>
