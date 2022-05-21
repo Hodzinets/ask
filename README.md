@@ -8,7 +8,8 @@
   
   <img width="384" alt="image" src="https://user-images.githubusercontent.com/25098043/169653365-c9f3ebd8-d112-4e09-ac36-9b9d8797e8b2.png">
 
-  Po adressem `localhost:5433` powinna powstać baza danych PostreSQL. Nazwa bazy danych to ask_db. Credentiale - User: ask_db_user hasło: ask_db_password
+  Po adressem `localhost:5433` powinna powstać baza danych PostreSQL. Nazwa bazy danych to ask_db. 
+  > User: `ask_db_user` hasło: `ask_db_password`
   
   Pod adressem `localhost:28080` powinien pojawić Keycloak dashboard.
   
@@ -29,3 +30,24 @@
   
   <img width="1063" alt="image" src="https://user-images.githubusercontent.com/25098043/169653522-e72413d5-7efd-49f9-b829-b3d2a7d68f2f.png">
 
+Przed uruchomieniem aplikacji należy dodać dwie wartości do zmiennych środowiskowych. Są to wartości dla Weather API.
+  
+![MicrosoftTeams-image (1)](https://user-images.githubusercontent.com/25098043/169653681-5e0feb8a-2496-4606-bbd7-c77f9abd7312.png)
+  
+Po uruchomieniu na porcie localhost:8080 będzie działać następująca aplikacja:
+  
+  ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/25098043/169653764-3ce9526a-ac32-485d-83c3-49eec4245ec7.png)
+
+  Po kliknięciu Login widzimy okno logowania / autoryzacji. Możemy zalogować się za pomocą Keycloak oraz Okta.
+  
+  > Po zalogowaniu po raz pierwszy za pomocą tych danych, należy dodać narzędzie 2FA, takie jak Google Authenticator.
+
+  ![MicrosoftTeams-image (3)](https://user-images.githubusercontent.com/25098043/169653904-c85c884e-4569-4257-a8d4-abad373f93d6.png)
+  
+  Po zalogowaniu widzimy stronę z aktualną informacją pogodową dla trzech miast: Krakowa, Gdańska i Warszawy.
+
+  ![MicrosoftTeams-image (4)](https://user-images.githubusercontent.com/25098043/169653979-d4d8a089-7dec-4666-951b-07f69764d2a0.png)
+
+Użytkownik jest zalogowany i widzi stronę aplikacji.
+
+  
